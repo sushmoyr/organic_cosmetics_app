@@ -6,6 +6,6 @@ This is not a complete application.
 
 ## Screenshots
 
-![alt text](/assets/splash_demo.png)
+![Splash Screen Screenshot]<img src="" width=540 height=1140>
 
 **Splash Screen**
