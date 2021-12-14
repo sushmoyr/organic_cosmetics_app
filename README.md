@@ -6,4 +6,6 @@ This is not a complete application.
 
 ## Screenshots
 
-**To be updated**
+![alt text](/assets/splash_demo.png)
+
+**Splash Screen**
