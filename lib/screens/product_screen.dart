@@ -16,6 +16,7 @@ class ProductScreen extends StatelessWidget {
     var data = productList;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black54),
@@ -39,7 +40,6 @@ class ProductScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
                 children: [
                   const Text(
                     'Categories',
@@ -62,13 +62,16 @@ class ProductScreen extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.center,
-                    stops: const [0, 0.4],
-                    colors: [Colors.white, Colors.white.withOpacity(0)])),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: 100,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.bottomCenter,
+                      end: Alignment.topCenter,
+                      colors: [Colors.white, Colors.white.withOpacity(0)])),
+            ),
           ),
           Align(
             alignment: Alignment.bottomCenter,
@@ -122,8 +125,12 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const ProductDetail()));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => ProductDetail(
+                      item: item,
+                    )));
       },
       child: SizedBox(
         width: size,

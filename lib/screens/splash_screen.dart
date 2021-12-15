@@ -43,7 +43,7 @@ class SplashScreen extends StatelessWidget {
                         color: Colors.white,
                         borderRadius: BorderRadius.all(Radius.circular(24))),
                   ),
-                  const Spacer(),
+                  Spacer(),
                   Align(
                       alignment: Alignment.bottomRight,
                       child: CircularIconButton(
